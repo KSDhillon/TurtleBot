@@ -40,7 +40,7 @@ class LotFollower():
         vel_msg.angular.z = 0
         velocity_publisher.publish(vel_msg)
 
-    def goto_parking_spot(self.spot_number):
+    def goto_parking_spot(self, spot_number):
         if (spot_number == 2):
             self.move_forward(28)
             self.turn_left()
