@@ -20,25 +20,25 @@ class LotFollower():
         t0 = rospy.Time.now().to_sec()
         current_distance = 0
         self.vel_msg.linear.x = 4
-        self.velocity_publisher.publish(vel_msg)
+        self.velocity_publisher.publish(self.vel_msg)
         while(current_distance < distance):
-            self.velocity_publisher.publish(vel_msg)
+            self.velocity_publisher.publish(self.vel_msg)
             t1 = rospy.Time.now().to_sec()
             current_distance = 20 * (t1 - t0)
         self.vel_msg.linear.x = 0
-        self.velocity_publisher.publish(vel_msg)
+        self.velocity_publisher.publish(self.vel_msg)
 
     def turn_left(self):
-        vel_msg.angular.z = 10
+        self.vel_msg.angular.z = 10
         t0 = rospy.Time.now().to_sec()
         current_distance = 0
-        velocity_publisher.publish(vel_msg)
+        self.velocity_publisher.publish(self.vel_msg)
         while(current_distance < 8):
-            velocity_publisher.publish(vel_msg)
+            self.velocity_publisher.publish(self.vel_msg)
             t1 = rospy.Time.now().to_sec()
             current_distance = 20* (t1-t0)
-        vel_msg.angular.z = 0
-        velocity_publisher.publish(vel_msg)
+        self.vel_msg.angular.z = 0
+        self.velocity_publisher.publish(self.vel_msg)
 
     def goto_parking_spot(self, spot_number):
         if (spot_number == 2):
