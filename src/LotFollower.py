@@ -50,7 +50,4 @@ class LotFollower():
 
 if __name__=='__main__':
     lf = LotFollower()
-    try:
-        lf.goto_parking_spot(2)
-    except rospy.ROSInterruptException:
-        pass
+    lf.goto_parking_spot(2)
