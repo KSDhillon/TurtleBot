@@ -68,20 +68,17 @@ class LotFollower():
             self.turn_left()
             self.turn_left()
             #end of return home code --- has not been tested yet
-            
         elif (spot_number == 2):
             self.move_forward(25.5)
             self.turn_left()
             self.move_forward(15)
             self.turn_left()
-            
 
         elif (spot_number == 3):
             self.move_forward(25.5)
             self.turn_left()
             self.move_forward(29)
             self.turn_right()
-            
         elif (spot_number == 4):
             self.move_forward(25.5)
             self.turn_left()
