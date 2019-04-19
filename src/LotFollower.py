@@ -88,4 +88,6 @@ class LotFollower():
 
 if __name__=='__main__':
     lf = LotFollower()
-    lf.goto_parking_spot(2)
+    while True:
+        x = int(input("Enter the Parking Spot Number: "))
+        lf.goto_parking_spot(x)
