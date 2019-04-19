@@ -40,7 +40,7 @@ class LotFollower():
         self.vel_msg.angular.z = 0
         self.velocity_publisher.publish(self.vel_msg)
 
-    
+
     def turn_right(self):
         self.vel_msg.angular.z = -14
         t0 = rospy.Time.now().to_sec()
@@ -53,7 +53,7 @@ class LotFollower():
         self.vel_msg.angular.z = 0
         self.velocity_publisher.publish(self.vel_msg)
 
-        
+
     def goto_parking_spot(self, spot_number):
         if (spot_number == 1):
             self.move_forward(25.5)
@@ -88,4 +88,4 @@ class LotFollower():
 
 if __name__=='__main__':
     lf = LotFollower()
-    lf.goto_parking_spot(1)
+    lf.goto_parking_spot(2)
