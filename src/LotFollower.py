@@ -44,7 +44,7 @@ class LotFollower():
         if (spot_number == 2):
             self.move_forward(28)
             self.turn_left()
-            self.move_forward(20)
+            # self.move_forward(20)
 
 
 
